@@ -1,9 +1,10 @@
 
 
 package interfaz;
+import Translate.Traduccion;
+import Translate.Traductor;
 import java.awt.*;
 import javax.swing.*;
-import Mundo.*;
 
 
 public class InterfazTraductor extends JFrame
