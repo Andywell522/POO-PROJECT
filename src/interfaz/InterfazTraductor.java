@@ -17,7 +17,7 @@ public class InterfazTraductor extends JFrame
     
     private PanelExtension panelExtension;
     private PanelAdicion panelAdicion;
-    private PanelListaNombres panelListaNombres;
+    private PanelDiccionarios panelListaNombres;
     private PanelConsulta panelConsulta;
     private PanelImagen panelImagen;
 
@@ -89,7 +89,7 @@ public class InterfazTraductor extends JFrame
     
      private void refrescarTotalesDiccionarios( )
     {
-        panelDiccionario.asignarTotalJapones( traductor.darTotalNombresTraducidos( Traductor.JAPONES ) );
+        panelListaNombres.asignarTotalJapones( traductor.darTotalNombresTraducidos( Traductor.JAPONES ) );
         
     }
     
