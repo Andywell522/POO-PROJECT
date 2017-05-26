@@ -31,7 +31,7 @@ public class PanelAdicion extends JPanel implements ActionListener
         // Guarda referencia a la ventana principal
         principal = ventanaPrincipal;
 
-        // Configura el layout y el borde con t�tulo
+        // Configura el layout y el borde con titulo
         setLayout( new GridLayout( 2, 5, 10, 10 ) );
         setBorder( BorderFactory.createTitledBorder( "Agregar palabras" ) );
 
@@ -39,11 +39,11 @@ public class PanelAdicion extends JPanel implements ActionListener
         etiquetaPalabra = new JLabel( "Palabra en espa�ol" );
         campoPalabra = new JTextField( );
 
-        // campo traducci�n
+        // campo traduccion
         etiquetaTraduccion = new JLabel( "Palabra traducida" );
         campoTraduccion = new JTextField( );
 
-        // combo idioma traducci�n
+        // combo idioma traduccion
         etiquetaIdiomaTraduccion = new JLabel( "Idioma traducci�n" );
     
 
@@ -70,13 +70,8 @@ public class PanelAdicion extends JPanel implements ActionListener
         add( botonLimpiar );
     }
 
-    // -----------------------------------------------------------------
-    // M�todos
-    // -----------------------------------------------------------------
+   
 
-    /**
-     * Limpia todos los campos y el combo del formulario
-     */
     public void limpiar( )
     {
         campoPalabra.setText( "" );
