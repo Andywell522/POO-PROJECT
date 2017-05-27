@@ -29,72 +29,79 @@ public class interfaaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButtonTraducir = new javax.swing.JButton();
-        jButtonSalir = new javax.swing.JButton();
-        jButtonLimpiar = new javax.swing.JButton();
-        jLabelMiku = new javax.swing.JLabel();
-        jTextFieldTitulo = new javax.swing.JTextField();
-        jLabelOP = new javax.swing.JLabel();
-        jLabelNge = new javax.swing.JLabel();
+        Traducir = new javax.swing.JButton();
+        Salir = new javax.swing.JButton();
+        Limpiar = new javax.swing.JButton();
+        Miku = new javax.swing.JLabel();
+        Titulo = new javax.swing.JTextField();
+        OP = new javax.swing.JLabel();
+        Nge = new javax.swing.JLabel();
         jLabelDBZ = new javax.swing.JLabel();
         jLabelAGK = new javax.swing.JLabel();
         jLabelKNN = new javax.swing.JLabel();
         jLabelDN = new javax.swing.JLabel();
         jLabelIngresaNombre = new javax.swing.JLabel();
-        jTextFieldNombreUsuario = new javax.swing.JTextField();
-        jButtonSound = new javax.swing.JButton();
-        jLabelFondo = new javax.swing.JLabel();
+        NombreUsuario = new javax.swing.JTextField();
+        Sound = new javax.swing.JButton();
+        SuLiteralEs = new javax.swing.JLabel();
+        Literal = new javax.swing.JTextField();
+        Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImage(getIconImage());
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButtonTraducir.setBackground(new java.awt.Color(102, 153, 255));
-        jButtonTraducir.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
-        jButtonTraducir.setForeground(new java.awt.Color(0, 102, 0));
-        jButtonTraducir.setText("TRADUCIR");
-        getContentPane().add(jButtonTraducir, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 460, 380, 70));
-
-        jButtonSalir.setBackground(new java.awt.Color(153, 102, 255));
-        jButtonSalir.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButtonSalir.setText("SALIR");
-        jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
+        Traducir.setBackground(new java.awt.Color(102, 153, 255));
+        Traducir.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        Traducir.setForeground(new java.awt.Color(0, 102, 0));
+        Traducir.setText("TRADUCIR");
+        Traducir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSalirActionPerformed(evt);
+                TraducirActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 210, 190, 50));
+        getContentPane().add(Traducir, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 460, 380, 70));
 
-        jButtonLimpiar.setBackground(new java.awt.Color(102, 102, 255));
-        jButtonLimpiar.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
-        jButtonLimpiar.setText("LIMPIAR");
-        jButtonLimpiar.addActionListener(new java.awt.event.ActionListener() {
+        Salir.setBackground(new java.awt.Color(153, 102, 255));
+        Salir.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Salir.setText("SALIR");
+        Salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonLimpiarActionPerformed(evt);
+                SalirActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 460, 400, 70));
+        getContentPane().add(Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 210, 190, 50));
 
-        jLabelMiku.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/miku.jpeg"))); // NOI18N
-        getContentPane().add(jLabelMiku, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
-
-        jTextFieldTitulo.setBackground(new java.awt.Color(51, 102, 255));
-        jTextFieldTitulo.setFont(new java.awt.Font("Bell MT", 1, 48)); // NOI18N
-        jTextFieldTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        jTextFieldTitulo.setText("Traduce tu nombre a Japonés con JAPONIZEITOR D.A.D");
-        jTextFieldTitulo.addActionListener(new java.awt.event.ActionListener() {
+        Limpiar.setBackground(new java.awt.Color(102, 102, 255));
+        Limpiar.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        Limpiar.setText("LIMPIAR");
+        Limpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldTituloActionPerformed(evt);
+                LimpiarActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 1270, 70));
+        getContentPane().add(Limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 460, 400, 70));
 
-        jLabelOP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/OP.png"))); // NOI18N
-        getContentPane().add(jLabelOP, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 120, -1, -1));
+        Miku.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/miku.jpeg"))); // NOI18N
+        getContentPane().add(Miku, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
 
-        jLabelNge.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/NGE.jpg"))); // NOI18N
-        jLabelNge.setText("jLabel1");
-        getContentPane().add(jLabelNge, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 640, 300, -1));
+        Titulo.setBackground(new java.awt.Color(51, 102, 255));
+        Titulo.setFont(new java.awt.Font("Bell MT", 1, 48)); // NOI18N
+        Titulo.setForeground(new java.awt.Color(255, 255, 255));
+        Titulo.setText("Traduce tu nombre a Japonés con JAPONIZEITOR D.A.D");
+        Titulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TituloActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 1270, 70));
+
+        OP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/OP.png"))); // NOI18N
+        getContentPane().add(OP, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 120, -1, -1));
+
+        Nge.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/NGE.jpg"))); // NOI18N
+        Nge.setText("jLabel1");
+        getContentPane().add(Nge, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 640, 300, -1));
 
         jLabelDBZ.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/DBZ.jpg"))); // NOI18N
         getContentPane().add(jLabelDBZ, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 640, -1, -1));
@@ -113,50 +120,234 @@ public class interfaaz extends javax.swing.JFrame {
         jLabelIngresaNombre.setText("Ingresa Tu Nombre:");
         getContentPane().add(jLabelIngresaNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, 320, 70));
 
-        jTextFieldNombreUsuario.setBackground(new java.awt.Color(153, 255, 255));
-        jTextFieldNombreUsuario.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jTextFieldNombreUsuario.addActionListener(new java.awt.event.ActionListener() {
+        NombreUsuario.setBackground(new java.awt.Color(153, 255, 255));
+        NombreUsuario.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        NombreUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreUsuarioActionPerformed(evt);
+                NombreUsuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldNombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 360, 500, 60));
+        getContentPane().add(NombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 360, 500, 60));
 
-        jButtonSound.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Sonido.jpg"))); // NOI18N
-        jButtonSound.addActionListener(new java.awt.event.ActionListener() {
+        Sound.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Sonido.jpg"))); // NOI18N
+        Sound.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSoundActionPerformed(evt);
+                SoundActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonSound, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 660, 100, 90));
+        getContentPane().add(Sound, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 660, 100, 90));
 
-        jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue.jpg"))); // NOI18N
-        jLabelFondo.setMaximumSize(new java.awt.Dimension(1650, 900));
-        jLabelFondo.setMinimumSize(new java.awt.Dimension(1640, 900));
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1600, 900));
+        SuLiteralEs.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        SuLiteralEs.setForeground(new java.awt.Color(255, 255, 255));
+        SuLiteralEs.setText("Traducción en Fonética española");
+        getContentPane().add(SuLiteralEs, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 580, 270, 40));
+
+        Literal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Literal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LiteralActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Literal, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 580, 430, 40));
+
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue.jpg"))); // NOI18N
+        Fondo.setMaximumSize(new java.awt.Dimension(1650, 900));
+        Fondo.setMinimumSize(new java.awt.Dimension(1640, 900));
+        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1600, 900));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_jButtonSalirActionPerformed
+    }//GEN-LAST:event_SalirActionPerformed
 
-    private void jTextFieldTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTituloActionPerformed
+    private void TituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TituloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTituloActionPerformed
+    }//GEN-LAST:event_TituloActionPerformed
 
-    private void jButtonLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimpiarActionPerformed
+    private void LimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimpiarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonLimpiarActionPerformed
+    }//GEN-LAST:event_LimpiarActionPerformed
 
-    private void jTextFieldNombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreUsuarioActionPerformed
+    private void NombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNombreUsuarioActionPerformed
+    }//GEN-LAST:event_NombreUsuarioActionPerformed
 
-    private void jButtonSoundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSoundActionPerformed
+    private void SoundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SoundActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonSoundActionPerformed
+    }//GEN-LAST:event_SoundActionPerformed
+
+    private void LiteralActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LiteralActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LiteralActionPerformed
+
+    private void TraducirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TraducirActionPerformed
+
+        
+         String resulname;
+        
+        resulname = NombreUsuario.getText ();
+        
+        
+        switch (resulname) {
+        
+            
+           case "Alexei Ochoa":            
+                Literal.setText("Arekusuei Ochoa " );
+            break;
+       
+            
+              
+            case "Cristian Aguilera":            
+                Literal.setText("Kurisutian Agirera" );
+            break;
+       
+        
+            case "Nicolás Álvarez":            
+                Literal.setText("Nikorasu Arubaresu" );
+            break;
+            
+            case "Alicia Arenaza":            
+                Literal.setText("Arishia Arenasa" );
+            break;
+            
+            case "David Bernal":            
+                Literal.setText("Dabiddo Berunaru" );
+            break;
+            
+            case "Diego Cortés":            
+                Literal.setText("Diego Korutesu" );
+            break;
+            
+            case "Diego Delgado":            
+                Literal.setText("Diego Derugado" );
+            break;
+            
+            case "Claudia Espejo":            
+                Literal.setText("Kuraudia Esupeho" );
+            break;
+            
+            case "David Fonseca":            
+                Literal.setText("Dabiddo Fonseka" );
+            break;
+            
+            case "Maicol Fontecha":            
+                Literal.setText( "Maikoru Fontecha" );
+            break;
+            
+            case "Johan Gamba":            
+                Literal.setText("Hoan Gamuba" );
+            break;
+            
+            case "Joan Gómez":            
+                Literal.setText( "Hoan Gomesu " );
+            break;
+            
+            case "David Gutiérrez":            
+                Literal.setText("Dabiddo Gutieresu" );
+            break;
+            
+            case "Jorge Hernández":            
+                Literal.setText("horuhe erunandesu" );
+            break;
+            
+            case "Sebastián Linares":            
+                Literal.setText(" sebasutian rinaresu" );
+            break;
+            
+            case "Andrés Lizarazo":            
+                Literal.setText(" andoresu risaraso" );
+            break;
+            
+            case "Nicolás Manosalva":            
+                Literal.setText("nikorasu manosaruba" );
+            break;
+            
+            case "Santiago Martín":            
+                Literal.setText("santiago marutin" );
+            break;
+            
+            case "Carlos Martínez":            
+                Literal.setText("karurosu marutinesu" );
+            break;
+       
+             case "Manuel Medina":            
+                Literal.setText("manueru medina" );
+            break;
+            
+             case "Daniel Mesa":            
+                Literal.setText("danieru mesa" );
+            break;
+            
+             case "Mauricio Meza":            
+                Literal.setText("maurishio mesa" );
+            break;
+            
+             case "Sebastián Moreno":            
+                Literal.setText( "Sebasutian Moreno" );
+            break;
+            
+            
+            case "Sergio Quintero":            
+                Literal.setText( "Seruhio Kintero" );
+            break;
+            
+            case "Daniela Quiroga":            
+                Literal.setText( "Daniera Kiroga" );
+            break;
+            
+            case "Mariana Rodríguez":            
+                Literal.setText( "Mariana Rodorigesu" );
+            break;
+            
+            case "Sebastián Sánchez":            
+                Literal.setText( "Sebasutian Sanchesu" );
+            break;
+            
+            case "María Sánchez":            
+                Literal.setText( "Maria Sanchesu" );
+            break;
+            
+            case "Oscar Segura":            
+                Literal.setText( "Osukaru Segura" );
+            break;
+            
+            case "Andrés Sierra":            
+                Literal.setText("Andoresu Shiera" );
+            break;
+            
+            case "Sebastián Tovar":            
+                Literal.setText("Sebasutian Tobaru" );
+            break;
+            
+            case "Julie Triviño":            
+                Literal.setText( "Furie Toribinyo" );
+            break;
+            
+            case "Brayan Upegui":            
+                Literal.setText(" Burajan Upegi" );
+            break;
+            
+            
+            case "Juan Valenzuela":            
+                Literal.setText( "Fuan Barensuera" );
+            break;
+            
+            
+            default:
+                Literal.setText("Ingrese su nombre correctamente escrito");
+            break;
+             
+        
+           
+        }
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_TraducirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,20 +385,22 @@ public class interfaaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonLimpiar;
-    private javax.swing.JButton jButtonSalir;
-    private javax.swing.JButton jButtonSound;
-    private javax.swing.JButton jButtonTraducir;
+    private javax.swing.JLabel Fondo;
+    private javax.swing.JButton Limpiar;
+    private javax.swing.JTextField Literal;
+    private javax.swing.JLabel Miku;
+    private javax.swing.JLabel Nge;
+    private javax.swing.JTextField NombreUsuario;
+    private javax.swing.JLabel OP;
+    private javax.swing.JButton Salir;
+    private javax.swing.JButton Sound;
+    private javax.swing.JLabel SuLiteralEs;
+    private javax.swing.JTextField Titulo;
+    private javax.swing.JButton Traducir;
     private javax.swing.JLabel jLabelAGK;
     private javax.swing.JLabel jLabelDBZ;
     private javax.swing.JLabel jLabelDN;
-    private javax.swing.JLabel jLabelFondo;
     private javax.swing.JLabel jLabelIngresaNombre;
     private javax.swing.JLabel jLabelKNN;
-    private javax.swing.JLabel jLabelMiku;
-    private javax.swing.JLabel jLabelNge;
-    private javax.swing.JLabel jLabelOP;
-    private javax.swing.JTextField jTextFieldNombreUsuario;
-    private javax.swing.JTextField jTextFieldTitulo;
     // End of variables declaration//GEN-END:variables
 }
