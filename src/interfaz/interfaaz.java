@@ -21,6 +21,9 @@ public class interfaaz extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabelMiku = new javax.swing.JLabel();
+        jLabelOP = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -37,15 +40,46 @@ public class interfaaz extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(153, 102, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton3.setText("SALIR");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 20, 190, 50));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1350, 210, 190, 50));
+
+        jLabelMiku.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/miku.jpeg"))); // NOI18N
+        getContentPane().add(jLabelMiku, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+
+        jLabelOP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/OP.png"))); // NOI18N
+        getContentPane().add(jLabelOP, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 20, -1, -1));
+
+        jTextField1.setBackground(new java.awt.Color(51, 102, 255));
+        jTextField1.setFont(new java.awt.Font("Bell MT", 1, 48)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(255, 102, 51));
+        jTextField1.setText("Traduce tu nombre a Japonés con JAPONIZEITOR 3000");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 1250, 70));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue.jpg"))); // NOI18N
+        jLabelFondo.setText("GGG");
         jLabelFondo.setMaximumSize(new java.awt.Dimension(1650, 900));
         jLabelFondo.setMinimumSize(new java.awt.Dimension(1640, 900));
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 900));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -87,5 +121,8 @@ public class interfaaz extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabelFondo;
+    private javax.swing.JLabel jLabelMiku;
+    private javax.swing.JLabel jLabelOP;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
