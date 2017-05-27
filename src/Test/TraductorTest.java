@@ -9,8 +9,8 @@
 package Test;
 
 import junit.framework.TestCase;
-import Translate.Traduccion;
-import Translate.Traductor;
+import Classes.Traduccion;
+import Classes.Traductor;
 
 
 public class TraductorTest extends TestCase

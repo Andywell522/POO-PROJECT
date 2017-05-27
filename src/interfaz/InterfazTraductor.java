@@ -1,8 +1,8 @@
 
 
 package interfaz;
-import Translate.Traduccion;
-import Translate.Traductor;
+import Classes.Traduccion;
+import Classes.Traductor;
 import java.awt.*;
 import javax.swing.*;
 

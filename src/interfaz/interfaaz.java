@@ -29,9 +29,9 @@ public class interfaaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButtonTraducir = new javax.swing.JButton();
+        jButtonSalir = new javax.swing.JButton();
+        jButtonLimpiar = new javax.swing.JButton();
         jLabelMiku = new javax.swing.JLabel();
         jTextFieldTitulo = new javax.swing.JTextField();
         jLabelOP = new javax.swing.JLabel();
@@ -42,37 +42,38 @@ public class interfaaz extends javax.swing.JFrame {
         jLabelDN = new javax.swing.JLabel();
         jLabelIngresaNombre = new javax.swing.JLabel();
         jTextFieldNombreUsuario = new javax.swing.JTextField();
+        jButtonSound = new javax.swing.JButton();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImage(getIconImage());
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(102, 153, 255));
-        jButton1.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 102, 0));
-        jButton1.setText("TRADUCIR");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 460, 380, 70));
+        jButtonTraducir.setBackground(new java.awt.Color(102, 153, 255));
+        jButtonTraducir.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        jButtonTraducir.setForeground(new java.awt.Color(0, 102, 0));
+        jButtonTraducir.setText("TRADUCIR");
+        getContentPane().add(jButtonTraducir, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 460, 380, 70));
 
-        jButton2.setBackground(new java.awt.Color(102, 102, 255));
-        jButton2.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
-        jButton2.setText("LIMPIAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSalir.setBackground(new java.awt.Color(153, 102, 255));
+        jButtonSalir.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonSalir.setText("SALIR");
+        jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonSalirActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 460, 400, 70));
+        getContentPane().add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 210, 190, 50));
 
-        jButton3.setBackground(new java.awt.Color(153, 102, 255));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton3.setText("SALIR");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButtonLimpiar.setBackground(new java.awt.Color(102, 102, 255));
+        jButtonLimpiar.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        jButtonLimpiar.setText("LIMPIAR");
+        jButtonLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButtonLimpiarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 210, 190, 50));
+        getContentPane().add(jButtonLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 460, 400, 70));
 
         jLabelMiku.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/miku.jpeg"))); // NOI18N
         getContentPane().add(jLabelMiku, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
@@ -96,7 +97,7 @@ public class interfaaz extends javax.swing.JFrame {
         getContentPane().add(jLabelNge, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 640, 300, -1));
 
         jLabelDBZ.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/DBZ.jpg"))); // NOI18N
-        getContentPane().add(jLabelDBZ, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 660, -1, -1));
+        getContentPane().add(jLabelDBZ, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 640, -1, -1));
 
         jLabelAGK.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/AGK.jpg"))); // NOI18N
         getContentPane().add(jLabelAGK, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, -1, -1));
@@ -121,6 +122,14 @@ public class interfaaz extends javax.swing.JFrame {
         });
         getContentPane().add(jTextFieldNombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 360, 500, 60));
 
+        jButtonSound.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Sonido.jpg"))); // NOI18N
+        jButtonSound.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSoundActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonSound, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 660, 100, 90));
+
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue.jpg"))); // NOI18N
         jLabelFondo.setMaximumSize(new java.awt.Dimension(1650, 900));
         jLabelFondo.setMinimumSize(new java.awt.Dimension(1640, 900));
@@ -129,21 +138,25 @@ public class interfaaz extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jButtonSalirActionPerformed
 
     private void jTextFieldTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTituloActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldTituloActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButtonLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimpiarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButtonLimpiarActionPerformed
 
     private void jTextFieldNombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldNombreUsuarioActionPerformed
+
+    private void jButtonSoundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSoundActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonSoundActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,9 +194,10 @@ public class interfaaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonLimpiar;
+    private javax.swing.JButton jButtonSalir;
+    private javax.swing.JButton jButtonSound;
+    private javax.swing.JButton jButtonTraducir;
     private javax.swing.JLabel jLabelAGK;
     private javax.swing.JLabel jLabelDBZ;
     private javax.swing.JLabel jLabelDN;
