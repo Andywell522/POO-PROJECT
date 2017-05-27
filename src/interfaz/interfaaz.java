@@ -22,20 +22,36 @@ public class interfaaz extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabelMiku = new javax.swing.JLabel();
+        jTextFieldTitulo = new javax.swing.JTextField();
         jLabelOP = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jLabelNge = new javax.swing.JLabel();
+        jLabelDBZ = new javax.swing.JLabel();
+        jLabelAGK = new javax.swing.JLabel();
+        jLabelKNN = new javax.swing.JLabel();
+        jLabelDN = new javax.swing.JLabel();
+        jLabelIngresaNombre = new javax.swing.JLabel();
+        jTextFieldNombreUsuario = new javax.swing.JTextField();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1600, 900));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("jButton1");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 180, 50));
+        jButton1.setBackground(new java.awt.Color(102, 153, 255));
+        jButton1.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 102, 0));
+        jButton1.setText("TRADUCIR");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 460, 380, 70));
 
-        jButton2.setText("jButton2");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, -1, -1));
+        jButton2.setBackground(new java.awt.Color(102, 102, 255));
+        jButton2.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        jButton2.setText("LIMPIAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 460, 400, 70));
 
         jButton3.setBackground(new java.awt.Color(153, 102, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -45,24 +61,54 @@ public class interfaaz extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1350, 210, 190, 50));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 210, 190, 50));
 
         jLabelMiku.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/miku.jpeg"))); // NOI18N
-        getContentPane().add(jLabelMiku, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+        getContentPane().add(jLabelMiku, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
 
-        jLabelOP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/OP.png"))); // NOI18N
-        getContentPane().add(jLabelOP, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 20, -1, -1));
-
-        jTextField1.setBackground(new java.awt.Color(51, 102, 255));
-        jTextField1.setFont(new java.awt.Font("Bell MT", 1, 48)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 102, 51));
-        jTextField1.setText("Traduce tu nombre a Japonés con JAPONIZEITOR 3000");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldTitulo.setBackground(new java.awt.Color(51, 102, 255));
+        jTextFieldTitulo.setFont(new java.awt.Font("Bell MT", 1, 48)); // NOI18N
+        jTextFieldTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldTitulo.setText("Traduce tu nombre a Japonés con JAPONIZEITOR D.A.D");
+        jTextFieldTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jTextFieldTituloActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 1250, 70));
+        getContentPane().add(jTextFieldTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 1270, 70));
+
+        jLabelOP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/OP.png"))); // NOI18N
+        getContentPane().add(jLabelOP, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 120, -1, -1));
+
+        jLabelNge.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/NGE.jpg"))); // NOI18N
+        jLabelNge.setText("jLabel1");
+        getContentPane().add(jLabelNge, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 640, 300, -1));
+
+        jLabelDBZ.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/DBZ.jpg"))); // NOI18N
+        getContentPane().add(jLabelDBZ, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 660, -1, -1));
+
+        jLabelAGK.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/AGK.jpg"))); // NOI18N
+        getContentPane().add(jLabelAGK, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, -1, -1));
+
+        jLabelKNN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/KNN.png"))); // NOI18N
+        getContentPane().add(jLabelKNN, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 410, -1, -1));
+
+        jLabelDN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/DN.jpg"))); // NOI18N
+        getContentPane().add(jLabelDN, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 170, -1, -1));
+
+        jLabelIngresaNombre.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jLabelIngresaNombre.setForeground(new java.awt.Color(255, 255, 51));
+        jLabelIngresaNombre.setText("Ingresa Tu Nombre:");
+        getContentPane().add(jLabelIngresaNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, 320, 70));
+
+        jTextFieldNombreUsuario.setBackground(new java.awt.Color(153, 255, 255));
+        jTextFieldNombreUsuario.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jTextFieldNombreUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNombreUsuarioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextFieldNombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 360, 500, 60));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue.jpg"))); // NOI18N
         jLabelFondo.setText("GGG");
@@ -77,9 +123,17 @@ public class interfaaz extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextFieldTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTituloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jTextFieldTituloActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextFieldNombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldNombreUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,9 +174,16 @@ public class interfaaz extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabelAGK;
+    private javax.swing.JLabel jLabelDBZ;
+    private javax.swing.JLabel jLabelDN;
     private javax.swing.JLabel jLabelFondo;
+    private javax.swing.JLabel jLabelIngresaNombre;
+    private javax.swing.JLabel jLabelKNN;
     private javax.swing.JLabel jLabelMiku;
+    private javax.swing.JLabel jLabelNge;
     private javax.swing.JLabel jLabelOP;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextFieldNombreUsuario;
+    private javax.swing.JTextField jTextFieldTitulo;
     // End of variables declaration//GEN-END:variables
 }
