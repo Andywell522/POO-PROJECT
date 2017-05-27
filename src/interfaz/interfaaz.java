@@ -1,6 +1,10 @@
 
 package interfaz;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+
+
 
 public class interfaaz extends javax.swing.JFrame {
 
@@ -9,6 +13,13 @@ public class interfaaz extends javax.swing.JFrame {
         initComponents();
     }
 
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource ("Imagenes/iconoo.jpg" ));
+        return retValue;
+    }
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,7 +45,7 @@ public class interfaaz extends javax.swing.JFrame {
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        setIconImage(getIconImage());
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setBackground(new java.awt.Color(102, 153, 255));
@@ -111,10 +122,9 @@ public class interfaaz extends javax.swing.JFrame {
         getContentPane().add(jTextFieldNombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 360, 500, 60));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue.jpg"))); // NOI18N
-        jLabelFondo.setText("GGG");
         jLabelFondo.setMaximumSize(new java.awt.Dimension(1650, 900));
         jLabelFondo.setMinimumSize(new java.awt.Dimension(1640, 900));
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 900));
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1600, 900));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
