@@ -10,7 +10,7 @@ import javax.swing.*;
 public class InterfazTraductor extends JFrame
 {
 
-    public static final String IDIOMA_ESPANOL = "Espa�ol";
+    public static final String IDIOMA_ESPANOL = "Español";
     public static final String IDIOMA_JAPONES = "Japones";
 
     private Traductor traductor;

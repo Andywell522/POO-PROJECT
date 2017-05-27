@@ -32,7 +32,7 @@ public class TraductorTest extends TestCase
 
         // Buscar una traduccion  que no exista
         Traduccion traduccion = traductor.traducir( "Arnoldo", Traductor.ESPANOL, Traductor.JAPONES );
-        assertNull( "No se debi� encontrar la traducci�n", traduccion );
+        assertNull( "No se debió encontrar la traducción", traduccion );
 
        
     }
