@@ -5,13 +5,53 @@ import java.awt.Image;
 import java.awt.Toolkit;
 
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
+
+
+
+
+import java.io.IOException;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+
+
 
 public class interfaaz extends javax.swing.JFrame {
 
     
+    public Clip clip;
+    public String ruta="/Sonidos/";   
+    
+    
     public interfaaz() {
         initComponents();
+        setLocationRelativeTo(null);
     }
+    
+    public void Sonidos (String archivo)
+    {
+    
+        
+        try {
+            
+            
+            clip= AudioSystem.getClip();
+            clip.open(AudioSystem.getAudioInputStream(getClass().getResourceAsStream(ruta+archivo+".mp3")));
+            clip.start();
+            
+        }catch (IOException | LineUnavailableException | UnsupportedAudioFileException e){
+        }
+        
+        
+    }
+    
+    
 
     public Image getIconImage(){
         Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource ("Imagenes/iconoo.jpg" ));
@@ -130,6 +170,11 @@ public class interfaaz extends javax.swing.JFrame {
         getContentPane().add(NombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 360, 500, 60));
 
         Sound.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Sonido.jpg"))); // NOI18N
+        Sound.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SoundMouseClicked(evt);
+            }
+        });
         Sound.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SoundActionPerformed(evt);
@@ -174,8 +219,16 @@ public class interfaaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_NombreUsuarioActionPerformed
 
+    
+    
     private void SoundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SoundActionPerformed
-        // TODO add your handling code here:
+       
+       // sonido("ndennee");
+     
+ 
+        
+        
+        
     }//GEN-LAST:event_SoundActionPerformed
 
     private void LiteralActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LiteralActionPerformed
@@ -194,7 +247,7 @@ public class interfaaz extends javax.swing.JFrame {
         
             
            case "Alexei Ochoa":            
-                Literal.setText("Arekusuei Ochoa " );
+                Literal.setText("Arekusuei Ochoa" );
             break;
        
             
@@ -249,39 +302,39 @@ public class interfaaz extends javax.swing.JFrame {
             break;
             
             case "Jorge Hernández":            
-                Literal.setText("horuhe erunandesu" );
+                Literal.setText("Horuhe Erunandesu" );
             break;
             
             case "Sebastián Linares":            
-                Literal.setText(" sebasutian rinaresu" );
+                Literal.setText(" Sebasutian Rinaresu" );
             break;
             
             case "Andrés Lizarazo":            
-                Literal.setText(" andoresu risaraso" );
+                Literal.setText(" Andoresu Risaraso" );
             break;
             
             case "Nicolás Manosalva":            
-                Literal.setText("nikorasu manosaruba" );
+                Literal.setText("Nikorasu Manosaruba" );
             break;
             
             case "Santiago Martín":            
-                Literal.setText("santiago marutin" );
+                Literal.setText("Santiago Marutin" );
             break;
             
             case "Carlos Martínez":            
-                Literal.setText("karurosu marutinesu" );
+                Literal.setText("Karurosu Marutinesu" );
             break;
        
              case "Manuel Medina":            
-                Literal.setText("manueru medina" );
+                Literal.setText("Manueru Medina" );
             break;
             
              case "Daniel Mesa":            
-                Literal.setText("danieru mesa" );
+                Literal.setText("Danieru Mesa" );
             break;
             
              case "Mauricio Meza":            
-                Literal.setText("maurishio mesa" );
+                Literal.setText("Maurishio Mesa" );
             break;
             
              case "Sebastián Moreno":            
@@ -348,6 +401,745 @@ public class interfaaz extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_TraducirActionPerformed
+
+    private void SoundMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SoundMouseClicked
+
+
+             String resulname2;
+        
+        resulname2 = Literal.getText ();
+    
+        
+        switch (resulname2) {
+        
+            
+           // case "Arekusuei Ochoa":            
+             //   Sonidos("alexei_ochoa");
+           // break;
+       
+            case "Arekusuei Ochoa":            
+                try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+
+            break;
+       
+              
+            case "Cristian Aguilera":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+       
+        
+            case "Nicolás Álvarez":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Alicia Arenaza":            
+                try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "David Bernal":            
+                try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Diego Cortés":            
+                Sonidos("ndennee");
+            break;
+            
+            case "Diego Delgado":            
+                try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Claudia Espejo":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "David Fonseca":            
+                try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Maicol Fontecha":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Johan Gamba":            
+                try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Joan Gómez":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "David Gutiérrez":            
+                try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Jorge Hernández":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Sebastián Linares":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Andrés Lizarazo":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Nicolás Manosalva":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Santiago Martín":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Carlos Martínez":            
+              try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+       
+             case "Manuel Medina":            
+                try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+             case "Daniel Mesa":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+             case "Mauricio Meza":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+             case "Sebastián Moreno":            
+                try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            
+            case "Sergio Quintero":            
+                try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Daniela Quiroga":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Mariana Rodríguez":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Sebastián Sánchez":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "María Sánchez":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Oscar Segura":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Andrés Sierra":            
+              try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Sebastián Tovar":            
+              try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Julie Triviño":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            case "Brayan Upegui":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            
+            case "Juan Valenzuela":            
+               try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
+    
+
+            break;
+            
+            
+            default:
+                Literal.setText("Ingrese su nombre correctamente escrito");
+            break;
+             
+        
+           
+        }
+
+
+
+
+
+
+
+
+
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SoundMouseClicked
 
     /**
      * @param args the command line arguments
