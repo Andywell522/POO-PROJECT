@@ -14,10 +14,18 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
-
+import Dataa.Nombres;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.util.ArrayList;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 public class interfaaz extends javax.swing.JFrame {
 
+    String pivote;
+    String text;   
+    businesss op = new businesss(); 
     
     public Clip clip;
     public String ruta="/Sonidos/";   
@@ -27,6 +35,39 @@ public class interfaaz extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
     }
+    
+    
+   public class Imagen extends javax.swing.JPanel {
+    public Imagen() {
+    this.setSize(144,222); //se selecciona el tamaño del panel
+    }
+    
+    //Se crea un método cuyo parámetro debe ser un objeto Graphics
+    @Override
+    public void paint(Graphics grafico) {
+    Dimension height = getSize();
+    //Objetos nombres
+        Nombres alexei = new Nombres ("Alexei","arekusei","/Images/ba.jpg");
+        Nombres carolina = new Nombres ("Carolina","carorina","/Images/be.jpg");    
+        Nombres daniela = new Nombres ("Daniela","daniera","/Images/bi.jpg");
+        Nombres claudia = new Nombres ("Claudia","karuaria","/Images/bo.jpg");
+        
+        ArrayList<Nombres> listas = new ArrayList<>();
+        listas.add(alexei);
+        listas.add(carolina);
+        listas.add(daniela);
+        listas.add(claudia);   
+    //Se selecciona la imagen que tenemos en el paquete de la //ruta del programa
+    ImageIcon Img = new ImageIcon(getClass().getResource(op.ruta(text,listas))); 
+    //se dibuja la imagen que tenemos en el paquete Images //dentro de un panel
+    grafico.drawImage(Img.getImage(), 0, 0, height.width, height.height, null);
+    setOpaque(false);
+    super.paintComponent(grafico);
+    }
+}
+    
+    
+    
     
     public void Sonidos (String archivo)
     {
@@ -68,10 +109,12 @@ public class interfaaz extends javax.swing.JFrame {
         jLabelKNN = new javax.swing.JLabel();
         jLabelDN = new javax.swing.JLabel();
         jLabelIngresaNombre = new javax.swing.JLabel();
+        Katakana = new javax.swing.JLabel();
         NombreUsuario = new javax.swing.JTextField();
         Sound = new javax.swing.JButton();
         SuLiteralEs = new javax.swing.JLabel();
         Literal = new javax.swing.JTextField();
+        KANA = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -81,13 +124,13 @@ public class interfaaz extends javax.swing.JFrame {
         Traducir.setBackground(new java.awt.Color(102, 153, 255));
         Traducir.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
         Traducir.setForeground(new java.awt.Color(0, 102, 0));
-        Traducir.setText("TRADUCIR");
+        Traducir.setText("TRADUCIR LITERAL");
         Traducir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TraducirActionPerformed(evt);
             }
         });
-        getContentPane().add(Traducir, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 460, 380, 70));
+        getContentPane().add(Traducir, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, 380, 60));
 
         Salir.setBackground(new java.awt.Color(153, 102, 255));
         Salir.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -146,6 +189,7 @@ public class interfaaz extends javax.swing.JFrame {
         jLabelIngresaNombre.setForeground(new java.awt.Color(255, 255, 51));
         jLabelIngresaNombre.setText("Ingresa Tu Nombre:");
         getContentPane().add(jLabelIngresaNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, 320, 70));
+        getContentPane().add(Katakana, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 690, 730, 150));
 
         NombreUsuario.setBackground(new java.awt.Color(153, 255, 255));
         NombreUsuario.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -167,12 +211,12 @@ public class interfaaz extends javax.swing.JFrame {
                 SoundActionPerformed(evt);
             }
         });
-        getContentPane().add(Sound, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 660, 100, 90));
+        getContentPane().add(Sound, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 640, 100, 90));
 
-        SuLiteralEs.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        SuLiteralEs.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         SuLiteralEs.setForeground(new java.awt.Color(255, 255, 255));
         SuLiteralEs.setText("Traducción en Fonética española");
-        getContentPane().add(SuLiteralEs, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 580, 270, 40));
+        getContentPane().add(SuLiteralEs, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 580, 350, 40));
 
         Literal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Literal.addActionListener(new java.awt.event.ActionListener() {
@@ -182,10 +226,21 @@ public class interfaaz extends javax.swing.JFrame {
         });
         getContentPane().add(Literal, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 580, 430, 40));
 
+        KANA.setBackground(new java.awt.Color(153, 204, 255));
+        KANA.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        KANA.setForeground(new java.awt.Color(0, 153, 51));
+        KANA.setText("TRADUCIR KATAKANA");
+        KANA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KANAActionPerformed(evt);
+            }
+        });
+        getContentPane().add(KANA, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 480, 380, 70));
+
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue.jpg"))); // NOI18N
         Fondo.setMaximumSize(new java.awt.Dimension(1650, 900));
         Fondo.setMinimumSize(new java.awt.Dimension(1640, 900));
-        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1600, 900));
+        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 1600, 900));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -221,8 +276,11 @@ public class interfaaz extends javax.swing.JFrame {
 
     private void TraducirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TraducirActionPerformed
 
+        Imagen Imagen = new Imagen();
+        Katakana.add(Imagen);
+        Katakana.repaint();
         
-         String resulname;
+        String resulname;
         
         resulname = NombreUsuario.getText ();
         
@@ -232,6 +290,7 @@ public class interfaaz extends javax.swing.JFrame {
             
            case "Alexei Ochoa":            
                 Literal.setText("Arekusuei Ochoa" );
+                pivote="/Imagenes/OP/";
             break;
        
             
@@ -389,7 +448,7 @@ public class interfaaz extends javax.swing.JFrame {
     private void SoundMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SoundMouseClicked
 
 
-             String resulname2;
+        String resulname2;
         
         resulname2 = Literal.getText ();
     
@@ -406,7 +465,7 @@ public class interfaaz extends javax.swing.JFrame {
                 player.play();    
             
            
-                }
+                } 
                 catch (JavaLayerException e){
                 e.printStackTrace();
                 }
@@ -1127,6 +1186,20 @@ public class interfaaz extends javax.swing.JFrame {
      
     }//GEN-LAST:event_SoundMouseClicked
 
+    private void KANAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KANAActionPerformed
+
+       
+              
+        
+
+
+
+
+        
+        
+        
+    }//GEN-LAST:event_KANAActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1164,6 +1237,8 @@ public class interfaaz extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
+    private javax.swing.JButton KANA;
+    private javax.swing.JLabel Katakana;
     private javax.swing.JButton Limpiar;
     private javax.swing.JTextField Literal;
     private javax.swing.JLabel Miku;
