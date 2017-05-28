@@ -3,13 +3,13 @@ package Classes;
 
 
 
-public class Traduccion
+public class Katakana
 {
 
     private String palabra;
     private String traduccion;
 
-    public Traduccion( String pal, String trad )
+    public Katakana( String pal, String trad )
     {
         palabra = pal;
         traduccion = trad;

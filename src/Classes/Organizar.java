@@ -5,22 +5,19 @@ package Classes;
 import java.util.ArrayList;
 
 
-public class Traductor
+public class Organizar
 {
 
-    public final static int ESPANOL = 0;
-    public final static int JAPONES = 3;
-
-  
-    private ArrayList espanolJapones;
+    public final static int a = 0;
+   
+    private ArrayList traduccion ;
 
 
 
-    public Traductor( )
+    public Organizar( )
     {
-        espanolJapones = new ArrayList( );
-     
-        verificarInvariante( );
+        traduccion = new ArrayList( );
+      
     }
 
    
@@ -29,32 +26,32 @@ public class Traductor
     {
         boolean agregada = false;
         // Busca la palabra en el diccionario del idioma
-        Traduccion laTraduccion = traducirDeEspanol( pal, idDestino );
+        Katakana laTraduccion = traducirDeEspanol( pal, idDestino );
         // Verifica que la palabra ni la traducción existan
         if( laTraduccion == null && !existeTraduccion( idDestino, trad ) )
         {
             // Obtiene el arreglo de las traducciones correspondientes al idioma
-            ArrayList traducciones = obtenerListaNombres( JAPONES );
+            ArrayList traducciones = obtenerListaNombres( a );
             // Agrega la palabra con su traducción al diccionario
-            traducciones.add( new Traduccion( pal, trad ) );
+            traducciones.add( new Katakana( pal, trad ) );
             agregada = true;
             // Verifica el invariante
-            verificarInvariante( );
+            ;
         }
         // Indica si la palabra fue agregada
         return agregada;
     }
   
 
-    private Traduccion traducirDeEspanol( String palabra, int JAPONES )
+    private Katakana traducirDeEspanol( String palabra, int JAPONES )
     {
         // Obtiene el arreglo de traducciones correspondiente al idioma de traducci�n
         ArrayList traducciones = obtenerListaNombres( JAPONES );
-        Traduccion traduccion = null;
+        Katakana traduccion = null;
         // Busca la palabra como palabra base en las traducciones
         for( int i = 0; i < traducciones.size( ) && traduccion == null; i++ )
         {
-            Traduccion aux = ( Traduccion )traducciones.get( i );
+            Katakana aux = ( Katakana )traducciones.get( i );
             if( aux.darPalabra( ).equalsIgnoreCase( palabra ) )
                 traduccion = aux;
         }
@@ -62,12 +59,12 @@ public class Traductor
     }
 
   
-    private ArrayList obtenerListaNombres( int idiomaTraduccion )
+    private ArrayList obtenerListaNombres( int a)
     {
-        switch( idiomaTraduccion )
+        switch( a )
         {
-            case JAPONES:
-                return espanolJapones;
+            case 1 :
+                return traduccion;
             
             default:
                 return null;
@@ -84,7 +81,7 @@ public class Traductor
         // Recorre el diccionario buscando si hay palabras con la misma traducción
         for( int i = 0; i < traducciones.size( ) && !existe; i++ )
         {
-            Traduccion t = ( Traduccion )traducciones.get( i );
+            Katakana t = ( Katakana )traducciones.get( i );
             String palabraTraducida = t.darTraduccion( );
             if( palabraTraducida.equalsIgnoreCase( traduccion ) )
                 existe = true;
@@ -92,7 +89,7 @@ public class Traductor
         return existe;
     }
    
-    public Traduccion traducir( String pal, int ESPANOL, int JAPONES )
+    public Katakana traducir( String pal, int ESPANOL, int JAPONES )
     {
        
         if( ESPANOL != JAPONES )
@@ -107,7 +104,7 @@ public class Traductor
             }
             else
             {
-                Traduccion aux = traducirAJapones( pal, ESPANOL );
+                Katakana aux = traducirAJapones( pal, ESPANOL );
                 if( aux != null )
                     return traducirDeEspanol( aux.darPalabra( ), JAPONES );
             }
@@ -115,15 +112,15 @@ public class Traductor
         return null;
     }
 
-    private Traduccion traducirAJapones( String palabra, int ESPANOL )
+    private Katakana traducirAJapones( String palabra, int ESPANOL )
     {
        
         ArrayList traducciones = obtenerListaNombres( ESPANOL );
-        Traduccion traduccion = null;
+        Katakana traduccion = null;
    
         for( int i = 0; i < traducciones.size( ) && traduccion == null; i++ )
         {
-            Traduccion aux = ( Traduccion )traducciones.get( i );
+            Katakana aux = ( Katakana )traducciones.get( i );
             if( aux.darTraduccion( ).equalsIgnoreCase( palabra ) )
                 traduccion = aux;
         }
@@ -144,19 +141,19 @@ public class Traductor
    
     private boolean hayNombresRepetidos( int JAPONES )
     {
-        Traduccion traduccion;
-        Traduccion otraTraduccion;
+        Katakana traduccion;
+        Katakana otraTraduccion;
         String nombre;
         ArrayList traducciones = obtenerListaNombres( JAPONES );
 
         // Recorre las traducciones buscando si hay palabras repetidas
         for( int i = 0; i < traducciones.size( ) - 1; i++ )
         {
-            traduccion = ( Traduccion )traducciones.get( i );
+            traduccion = ( Katakana )traducciones.get( i );
             nombre = traduccion.darPalabra( );
             for( int j = i + 1; j < traducciones.size( ); j++ )
             {
-                otraTraduccion = ( Traduccion )traducciones.get( j );
+                otraTraduccion = ( Katakana )traducciones.get( j );
                 if( nombre.equalsIgnoreCase( otraTraduccion.darPalabra( ) ) )
                     return true;
             }
@@ -167,19 +164,19 @@ public class Traductor
     
     private boolean hayTraduccionesRepetidas( int JAPONES )
     {
-        Traduccion traduccion;
-        Traduccion otraTraduccion;
+        Katakana traduccion;
+        Katakana otraTraduccion;
         String palabraTraducida;
         ArrayList traducciones = obtenerListaNombres( JAPONES );
 
         // Recorre las traducciones buscando si hay palabras con la misma traduccion
         for( int i = 0; i < traducciones.size( ) - 1; i++ )
         {
-            traduccion = ( Traduccion )traducciones.get( i );
+            traduccion = ( Katakana )traducciones.get( i );
             palabraTraducida = traduccion.darTraduccion( );
             for( int j = i + 1; j < traducciones.size( ); j++ )
             {
-                otraTraduccion = ( Traduccion )traducciones.get( j );
+                otraTraduccion = ( Katakana )traducciones.get( j );
                 if( palabraTraducida.equalsIgnoreCase( otraTraduccion.darTraduccion( ) ) )
                     return true;
             }
@@ -188,14 +185,7 @@ public class Traductor
     }
 
 
-    private void verificarInvariante( )
-    {
-        assert espanolJapones != null : "Diccionario español-japones sin inicializar";
-
-        assert !hayNombresRepetidos( ESPANOL ) : "Nombres Repetidos en Japones";
-    
-        assert !hayTraduccionesRepetidas( JAPONES ) : "Nombres Repetidos en Japones";
-    }
+   
 
     
    
