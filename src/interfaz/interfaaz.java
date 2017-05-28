@@ -258,30 +258,22 @@ public class interfaaz extends javax.swing.JFrame {
     }//GEN-LAST:event_LiteralActionPerformed
 
     private void TraducirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TraducirActionPerformed
-
-        Imagen Imagen = new Imagen();
-        Katakana.add(Imagen);
-        Katakana.repaint();
-        
+                
         String resulname;
         
         resulname = NombreUsuario.getText ();
-        
-        
+                
         switch (resulname) {
         
             
            case "Alexei Ochoa":            
                 Literal.setText("Arekusuei Ochoa" );
                 pivote="/Imagenes/OP/";
-            break;
-       
-            
+            break;                   
               
             case "Cristian Aguilera":            
                 Literal.setText("Kurisutian Agirera" );
-            break;
-       
+            break;       
         
             case "Nicolás Álvarez":            
                 Literal.setText("Nikorasu Arubaresu" );
@@ -365,8 +357,7 @@ public class interfaaz extends javax.swing.JFrame {
             
              case "Sebastián Moreno":            
                 Literal.setText( "Sebasutian Moreno" );
-            break;
-            
+            break;            
             
             case "Sergio Quintero":            
                 Literal.setText( "Seruhio Kintero" );
@@ -416,16 +407,12 @@ public class interfaaz extends javax.swing.JFrame {
             
             default:
                 Literal.setText("Ingrese su nombre correctamente escrito");
-            break;
-             
-        
-           
+            break; 
         }
         
-        
-        
-        
-        
+        Imagen Imagen = new Imagen();
+        Katakana.add(Imagen);
+        Katakana.repaint();  
     }//GEN-LAST:event_TraducirActionPerformed
 
     private void SoundMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SoundMouseClicked
