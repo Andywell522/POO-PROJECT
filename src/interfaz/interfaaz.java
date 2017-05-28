@@ -37,37 +37,22 @@ public class interfaaz extends javax.swing.JFrame {
     }
     
     
-   public class Imagen extends javax.swing.JPanel {
+    public class Imagen extends javax.swing.JPanel {
     public Imagen() {
     this.setSize(144,222); //se selecciona el tamaño del panel
     }
-    
     //Se crea un método cuyo parámetro debe ser un objeto Graphics
     @Override
     public void paint(Graphics grafico) {
-    Dimension height = getSize();
-    //Objetos nombres
-        Nombres alexei = new Nombres ("Alexei","arekusei","/Images/ba.jpg");
-        Nombres carolina = new Nombres ("Carolina","carorina","/Images/be.jpg");    
-        Nombres daniela = new Nombres ("Daniela","daniera","/Images/bi.jpg");
-        Nombres claudia = new Nombres ("Claudia","karuaria","/Images/bo.jpg");
-        
-        ArrayList<Nombres> listas = new ArrayList<>();
-        listas.add(alexei);
-        listas.add(carolina);
-        listas.add(daniela);
-        listas.add(claudia);   
+    Dimension height = getSize(); 
     //Se selecciona la imagen que tenemos en el paquete de la //ruta del programa
-    ImageIcon Img = new ImageIcon(getClass().getResource(op.ruta(text,listas))); 
+    ImageIcon Img = new ImageIcon(getClass().getResource(pivote)); 
     //se dibuja la imagen que tenemos en el paquete Images //dentro de un panel
     grafico.drawImage(Img.getImage(), 0, 0, height.width, height.height, null);
     setOpaque(false);
     super.paintComponent(grafico);
     }
 }
-    
-    
-    
     
     public void Sonidos (String archivo)
     {
@@ -80,8 +65,6 @@ public class interfaaz extends javax.swing.JFrame {
             
         }catch (IOException | LineUnavailableException | UnsupportedAudioFileException e){
         }
-        
-        
     }
     
     
