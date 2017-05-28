@@ -89,33 +89,12 @@ public class Organizar
         return existe;
     }
    
-    public Katakana traducir( String pal, int ESPANOL, int JAPONES )
-    {
-       
-        if( ESPANOL != JAPONES )
-        {
-            if( ESPANOL == ESPANOL )
-            {
-                return traducirDeEspanol( pal, JAPONES );
-            }
-            else if( JAPONES == ESPANOL )
-            {
-                return traducirAJapones( pal, ESPANOL );
-            }
-            else
-            {
-                Katakana aux = traducirAJapones( pal, ESPANOL );
-                if( aux != null )
-                    return traducirDeEspanol( aux.darPalabra( ), JAPONES );
-            }
-        }
-        return null;
-    }
+    
 
-    private Katakana traducirAJapones( String palabra, int ESPANOL )
+    private Katakana traducirAJapones( String palabra, int a )
     {
        
-        ArrayList traducciones = obtenerListaNombres( ESPANOL );
+        ArrayList traducciones = obtenerListaNombres( a );
         Katakana traduccion = null;
    
         for( int i = 0; i < traducciones.size( ) && traduccion == null; i++ )
@@ -128,10 +107,10 @@ public class Organizar
     }
 
    
-    public int darTotalNombresTraducidos( int JAPONES )
+    public int darTotalNombresTraducidos( int a )
     {
        
-        ArrayList traducciones = obtenerListaNombres( JAPONES );
+        ArrayList traducciones = obtenerListaNombres( a );
         if( traducciones == null )
             return 0;
         else
@@ -139,12 +118,12 @@ public class Organizar
     }
 
    
-    private boolean hayNombresRepetidos( int JAPONES )
+    private boolean hayNombresRepetidos( int a )
     {
         Katakana traduccion;
         Katakana otraTraduccion;
         String nombre;
-        ArrayList traducciones = obtenerListaNombres( JAPONES );
+        ArrayList traducciones = obtenerListaNombres( a );
 
         // Recorre las traducciones buscando si hay palabras repetidas
         for( int i = 0; i < traducciones.size( ) - 1; i++ )
@@ -162,12 +141,12 @@ public class Organizar
     }
 
     
-    private boolean hayTraduccionesRepetidas( int JAPONES )
+    private boolean hayTraduccionesRepetidas( int a )
     {
         Katakana traduccion;
         Katakana otraTraduccion;
         String palabraTraducida;
-        ArrayList traducciones = obtenerListaNombres( JAPONES );
+        ArrayList traducciones = obtenerListaNombres( a );
 
         // Recorre las traducciones buscando si hay palabras con la misma traduccion
         for( int i = 0; i < traducciones.size( ) - 1; i++ )
