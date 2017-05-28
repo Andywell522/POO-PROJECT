@@ -293,7 +293,7 @@ public class interfaaz extends javax.swing.JFrame {
             break;
             
             case "Joan Gómez":            
-                Literal.setText( "Hoan Gomesu " );
+                Literal.setText( "Hoan Gomesu" );
             break;
             
             case "David Gutiérrez":            
@@ -305,11 +305,11 @@ public class interfaaz extends javax.swing.JFrame {
             break;
             
             case "Sebastián Linares":            
-                Literal.setText(" Sebasutian Rinaresu" );
+                Literal.setText( "Sebasutian Rinaresu" );
             break;
             
             case "Andrés Lizarazo":            
-                Literal.setText("Andoresu Risaraso" );
+                Literal.setText( "Andoresu Risaraso" );
             break;
             
             case "Nicolás Manosalva":            
@@ -482,7 +482,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "Alicia Arenaza":            
+            case "Arishia Arenasa":            
                 try {
                 FileInputStream fis;
                 Player player;
@@ -503,7 +503,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "David Bernal":            
+            case "Dabiddo Berunaru":            
                 try {
                 FileInputStream fis;
                 Player player;
@@ -524,11 +524,26 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "Diego Cortés":            
-                Sonidos("ndennee");
+            case "Diego Korutesu":            
+                try {
+                FileInputStream fis;
+                Player player;
+                fis = new FileInputStream("C:\\Users\\Andres\\Desktop\\drive-download-20170527T230652Z-001\\alexei_ochoa.mp3");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                player = new Player(bis);
+                player.play();    
+            
+           
+                }
+                catch (JavaLayerException e){
+                e.printStackTrace();
+                }
+                catch (FileNotFoundException e){
+                e.printStackTrace();
+             }
             break;
             
-            case "Diego Delgado":            
+            case "Diego Derugado":            
                 try {
                 FileInputStream fis;
                 Player player;
@@ -549,7 +564,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "Claudia Espejo":            
+            case "Kuraudia Esupeho":            
                try {
                 FileInputStream fis;
                 Player player;
@@ -570,7 +585,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "David Fonseca":            
+            case "Dabiddo Fonseka":            
                 try {
                 FileInputStream fis;
                 Player player;
@@ -591,7 +606,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "Maicol Fontecha":            
+            case "Maikoru Fontecha":            
                try {
                 FileInputStream fis;
                 Player player;
@@ -612,7 +627,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "Johan Gamba":            
+            case "Hoan Gamuba":            
                 try {
                 FileInputStream fis;
                 Player player;
@@ -633,7 +648,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "Joan Gómez":            
+            case "Hoan Gomesu":            
                try {
                 FileInputStream fis;
                 Player player;
@@ -654,7 +669,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "David Gutiérrez":            
+            case "Dabiddo Gutieresu":            
                 try {
                 FileInputStream fis;
                 Player player;
@@ -675,7 +690,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "Jorge Hernández":            
+            case "Horuhe Erunandesu":            
                try {
                 FileInputStream fis;
                 Player player;
@@ -696,7 +711,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "Sebastián Linares":            
+            case "Sebasutian Rinaresu":            
                try {
                 FileInputStream fis;
                 Player player;
@@ -738,7 +753,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "Nicolás Manosalva":            
+            case "Nikorasu Manosaruba":            
                try {
                 FileInputStream fis;
                 Player player;
@@ -759,7 +774,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "Santiago Martín":            
+            case "Santiago Marutin":            
                try {
                 FileInputStream fis;
                 Player player;
@@ -780,7 +795,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "Carlos Martínez":            
+            case "Karurosu Marutinesu":            
               try {
                 FileInputStream fis;
                 Player player;
@@ -801,7 +816,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
        
-             case "Manuel Medina":            
+             case "Manueru Medina":            
                 try {
                 FileInputStream fis;
                 Player player;
@@ -822,7 +837,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-             case "Daniel Mesa":            
+             case "Danieru Mesa":            
                try {
                 FileInputStream fis;
                 Player player;
@@ -843,7 +858,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-             case "Mauricio Meza":            
+             case "Maurishio Mesa":            
                try {
                 FileInputStream fis;
                 Player player;
@@ -864,7 +879,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-             case "Sebastián Moreno":            
+             case "Sebasutian Moreno":            
                 try {
                 FileInputStream fis;
                 Player player;
@@ -886,7 +901,7 @@ public class interfaaz extends javax.swing.JFrame {
             break;
             
             
-            case "Sergio Quintero":            
+            case "Seruhio Kintero":            
                 try {
                 FileInputStream fis;
                 Player player;
@@ -907,7 +922,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "Daniela Quiroga":            
+            case "Daniera Kiroga":            
                try {
                 FileInputStream fis;
                 Player player;
@@ -928,7 +943,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "Mariana Rodríguez":            
+            case "Mariana Rodorigesu":            
                try {
                 FileInputStream fis;
                 Player player;
@@ -949,7 +964,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "Sebastián Sánchez":            
+            case "Sebasutian Sanchesu":            
                try {
                 FileInputStream fis;
                 Player player;
@@ -970,7 +985,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "María Sánchez":            
+            case "Maria Sanchesu":            
                try {
                 FileInputStream fis;
                 Player player;
@@ -991,7 +1006,7 @@ public class interfaaz extends javax.swing.JFrame {
 
             break;
             
-            case "Oscar Segura":            
+            case "Osukaru Segura":            
                try {
                 FileInputStream fis;
                 Player player;
