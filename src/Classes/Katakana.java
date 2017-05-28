@@ -13,7 +13,7 @@ public class Katakana
     {
         palabra = pal;
         traduccion = trad;
-        verificarInvariante( );
+       
     }
 
     public String darPalabra( )
@@ -27,19 +27,7 @@ public class Katakana
     }
 
     
-    private boolean palabraEsValida( )
-    {
-        return palabra != null && !palabra.equals( "" );
-    }
+   
 
-    private boolean traduccionEsValida( )
-    {
-        return traduccion != null && !traduccion.equals( "" );
-    }
-
-    private void verificarInvariante( )
-    {
-        assert palabraEsValida( ) : "La palabra es invalida";
-        assert traduccionEsValida( ) : "La traduccion es invalida";
-    }
+  
 }

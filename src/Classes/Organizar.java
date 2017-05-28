@@ -20,14 +20,7 @@ public class Organizar
       
     }
 
-   
-    
-   
-  
-
-    
-
-    private Katakana traducirKatakana( String palabra, int a )
+        private Katakana traducirKatakana( String palabra, int a )
     {
        
         
@@ -52,8 +45,6 @@ public class Organizar
         Katakana otraTraduccion;
         String nombre;
         
-
-        // Recorre las traducciones buscando si hay palabras repetidas
         for( int i = 0; i < traducciones.size( ) - 1; i++ )
         {
             traduccion = ( Katakana )traducciones.get( i );
